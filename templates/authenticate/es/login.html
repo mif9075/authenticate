@@ -1,0 +1,25 @@
+{% extends 'authenticate/es/base.html' %}
+
+{% block content %}
+
+<h2 class="text-center">Conectarte</h2>
+
+<div class="col-md-6 offset-md-3">
+	<form method="POST">
+		{% csrf_token %}
+	  <div class="form-group">
+	  		    
+	    <input type="text" class="form-control"  placeholder="Usuario" name="username">
+	  </div>
+      <br/>
+	  <div class="form-group">
+	    
+	    <input type="password" class="form-control"  placeholder="Contraseńa" name="password">
+	  </div>
+	  <br/>
+	  <button type="submit" class="btn btn-secondary">Remitir</button>
+	</form>
+
+</div>
+
+{% endblock %}
